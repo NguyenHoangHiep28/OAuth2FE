@@ -1,0 +1,22 @@
+<main class="page-center">
+    <article class="sign-up">
+      <h3><span style="color: blue;">{{appName}}</span> wants access to your CodingLife account <span style="color: blue;">{{accountName}}</span></h3>
+      <br>
+      <form class="sign-up-form form text-center" style="background-color: aliceblue;" action="" method="">
+        <p class="text-secondary">When you grant this access, <span style="color: blue;">{{appName}}</span> will be able to :</p>
+        <ul>
+            <li style="padding: 10px;" class="text text-secondary" *ngFor="let i of scopes">- <span class="text text-danger">{{i.name}}</span> your CodingLife account.</li>
+        </ul>
+        <hr>
+        <h3>Make sure you trust the <span style="color: blue;">{{appName}}</span></h3>
+        <br>
+        <p class="text-secondary">You may be sharing sensitive information with this website or app.</p>
+        <p class="text-secondary">You can always view or remove access in CodingLife Account mine.</p>
+        <div style="display: flex; justify-content:space-around;">
+            <button (click)="cancel()" class="btn btn-danger">Cancel</button>
+            <button (click)="grantedAuthorities()" class="btn btn-primary">Continue</button>
+        </div>
+      </form>
+    </article>
+  </main>
+
